@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import Navbar from "./Navbar";
+import ItemDetail from "./ItemDetail"; // new component for detail page
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,6 +22,8 @@ function App() {
         <Route exact path="/">
           <Home isLoggedIn={isLoggedIn} />
         </Route>
+        <Route path="/item/:id" component={ItemDetail} /> // new route for item
+        detail page
       </Switch>
     </div>
   );
